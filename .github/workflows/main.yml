@@ -1,0 +1,16 @@
+name: Send HTTP GET Request
+
+on:
+  schedule:
+    # 5분마다 실행 (UTC 기준)
+    - cron: '*/5 * * * *'
+
+jobs:
+  send-request:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send HTTP GET request
+      run: |
+        curl -v -G GET "https://weldaai.com/searchBot/" \
+        --data-urlencode "query=" \
+        -H "x-api-key: ${{ secrets.x_api_key }}"
