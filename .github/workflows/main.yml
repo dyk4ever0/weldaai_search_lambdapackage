@@ -1,9 +1,11 @@
 name: Send HTTP GET Request
 
 on:
+  push:
+    branches:
+      - main  # main 브랜치에 커밋
   schedule:
-    # 5분마다 실행 (UTC 기준)
-    - cron: '*/5 * * * *'
+    - cron: '*/5 * * * *'  # 5분마다
 
 jobs:
   send-request:
