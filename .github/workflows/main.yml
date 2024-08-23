@@ -14,5 +14,5 @@ jobs:
     - name: Send HTTP GET request
       run: |
         curl -v -G GET "https://weldaai.com/searchBot/" \
-        --data-urlencode "query=" \
+        --data-urlencode "query=혈당" \
         -H "x-api-key: ${{ secrets.x_api_key }}"
