@@ -5,7 +5,7 @@ on:
     branches:
       - main  # main 브랜치에 커밋
   schedule:
-    - cron: '*/5 22-23,0-13 * * *'  # 5분마다, UTC 22-13
+    - cron: '*/4 22-23,0-13 * * *'  # 분, UTC 22-13
 
 jobs:
   send-request:
